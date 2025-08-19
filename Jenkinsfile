@@ -19,6 +19,11 @@ pipeline {
             bat 'venv\\Scripts\\Activate.ps1; python -m unittest discover'
             }
         }
+        stage('Run') {
+            steps {
+                bat 'venv\\Scripts\\Activate.ps1; python app.py'
+            }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying app...'
