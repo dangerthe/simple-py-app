@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/dangerthe/simple-py-app.git'
+               git branch: 'main', url: 'https://github.com/dangerthe/simple-py-app.git'
             }
         }
         stage('Install') {
